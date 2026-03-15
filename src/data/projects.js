@@ -101,7 +101,7 @@ export const projects = [
       "Drag-and-drop shift editing in roster view"
     ],
     links: {
-      live: "https://message-app-ukya.onrender.com/",
+      live: "https://schedule-fe-jmpv.onrender.com/login",
       github: "https://github.com/Ruwaidah/schedule-fe",
     },
   },
@@ -167,7 +167,7 @@ export const projects = [
       "Backend/API integration with real pet adoption data source"
     ],
     links: {
-      live: "https://your-live-link.com/",
+      live: "https://boo-fe.onrender.com/",
       github: "https://github.com/Ruwaidah/boo-fe",
     },
   }
