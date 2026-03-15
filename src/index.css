@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-image: url("./assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80% 20%;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(232, 90, 174, 0.35);
+}
+
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(232, 90, 174, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(246, 168, 212, 0.10), transparent 50%),
+    radial-gradient(circle at 60% 80%, rgba(232, 90, 174, 0.10), transparent 55%),
+    radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.06), transparent 45%);
+  pointer-events: none;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 3px);
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
