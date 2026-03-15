@@ -101,7 +101,7 @@ export const projects = [
       "Drag-and-drop shift editing in roster view"
     ],
     links: {
-      live: "https://schedule-fe-jmpv.onrender.com/login",
+      live: "https://schedule-fe-jmpv.onrender.com",
       github: "https://github.com/Ruwaidah/schedule-fe",
     },
   },
