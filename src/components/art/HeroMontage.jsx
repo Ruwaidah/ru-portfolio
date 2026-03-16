@@ -38,7 +38,7 @@ export default function HeroMontage() {
             >
                 <Shot
                     src={scheduleImg}
-                    caption="Walmart Scheduling"
+                    caption="Scheduling"
                     className="left-[8%] top-[12%] h-[66%] w-[84%] md:left-[10%] md:top-[10%] md:h-[68%] md:w-[80%]"
                 />
                 <Shot

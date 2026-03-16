@@ -35,9 +35,9 @@ export const projects = [
     },
   },
   {
-    id: "walmart-scheduling-app",
+    id: "Scheduling-app",
     image: scheduleImg,
-    title: "Walmart Scheduling App",
+    title: "Scheduling App",
     tagline: "Role-based weekly scheduling + time off & swap requests",
     category: "Internal Tool",
     stack: ["React (Vite)", "Tailwind", "Redux Toolkit", "Node/Express", "Knex", "PostgreSQL"],
