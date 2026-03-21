@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
@@ -19,6 +20,93 @@ function ProgressBar({ value = 0 }) {
           className="h-2 rounded-full bg-pink-500/60"
           style={{ width: `${v}%` }}
         />
+      </div>
+    </div>
+  );
+}
+
+function CopyButton({ text, label = "Copy" }) {
+  const [copied, setCopied] = React.useState(false);
+
+  async function copy() {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
+    }
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={copy}
+      className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+    >
+      {copied ? "Copied" : label}
+    </button>
+  );
+}
+
+function DemoLogin({ accounts = [] }) {
+  if (!accounts.length) return null;
+
+  return (
+    <div>
+      <h3 className="text-lg font-semibold">Demo Login</h3>
+      <p className="mt-2 text-sm text-mutetext">
+        Use these demo accounts to explore the app.
+      </p>
+
+      <div className="mt-4 grid gap-4 md:grid-cols-3">
+        {accounts.map((a) => (
+          <div
+            key={a.role}
+            className="rounded-2xl border border-white/10 bg-black/20 p-5"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <div className="text-sm font-semibold text-text">{a.role}</div>
+                <div className="mt-1 text-xs text-mutetext">Demo account</div>
+              </div>
+
+              <CopyButton
+                text={`Email: ${a.email}\nPassword: ${a.password}`}
+                label="Copy all"
+              />
+            </div>
+
+            <div className="mt-5 space-y-4">
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="text-[11px] uppercase tracking-wide text-mutetext/80">
+                    Email
+                  </div>
+                  <div className="truncate text-sm text-text">{a.email}</div>
+                </div>
+                <CopyButton text={a.email} />
+              </div>
+
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="text-[11px] uppercase tracking-wide text-mutetext/80">
+                    Password
+                  </div>
+                  <div className="truncate text-sm text-text">{a.password}</div>
+                </div>
+                <CopyButton text={a.password} />
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -113,8 +201,9 @@ export default function CaseStudy() {
                 </ul>
               </GlassCard>
             </div>
+            {/* Project Links */}
             {p.links && (
-              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6">
+              <GlassCard className="mt-8 p-6">
                 <h3 className="text-lg font-semibold">Project Links</h3>
                 <p className="mt-2 text-sm text-mutetext">
                   View the live demo or explore the source code.
@@ -126,49 +215,42 @@ export default function CaseStudy() {
                       href={p.links.live}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-xl border border-pink-400/20 bg-pink-500/10 px-5 py-2.5 text-sm font-medium text-pink-200 hover:bg-pink-500/15 transition"
+                      className="inline-flex h-10 items-center justify-center rounded-xl border border-pink-400/20 bg-pink-500/10 px-4 text-sm font-medium text-pink-200 hover:bg-pink-500/15 transition"
                     >
                       Live Demo
                     </a>
                   )}
 
-                  {/* Frontend repo */}
                   {p.links.githubFrontend && (
                     <a
                       href={p.links.githubFrontend}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-mutetext hover:bg-white/10 hover:text-text transition"
+                      className="inline-flex h-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 text-sm text-mutetext hover:bg-white/10 hover:text-text transition"
                     >
                       Frontend Repo
                     </a>
                   )}
 
-                  {/* Backend repo */}
                   {p.links.githubBackend && (
                     <a
                       href={p.links.githubBackend}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-mutetext hover:bg-white/10 hover:text-text transition"
+                      className="inline-flex h-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 text-sm text-mutetext hover:bg-white/10 hover:text-text transition"
                     >
                       Backend Repo
                     </a>
                   )}
-
-                  {/* Optional: fallback if you still have p.links.github */}
-                  {!p.links.githubFrontend && !p.links.githubBackend && p.links.github && (
-                    <a
-                      href={p.links.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-mutetext hover:bg-white/10 hover:text-text transition"
-                    >
-                      GitHub Repo
-                    </a>
-                  )}
                 </div>
-              </div>
+              </GlassCard>
+            )}
+
+            {/* Demo Login  */}
+            {p.demoAccounts?.length > 0 && (
+              <GlassCard className="mt-6 p-6">
+                <DemoLogin accounts={p.demoAccounts} />
+              </GlassCard>
             )}
             <div className="mt-10">
               <Link

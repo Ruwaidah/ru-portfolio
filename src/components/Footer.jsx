@@ -10,7 +10,6 @@ export default function Footer() {
           © {new Date().getFullYear()} Ruwaidah Afakhri — Full-Stack Developer
         </div>
 
-        {/* ALL LINKS IN ONE GROUP (no huge empty space) */}
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-mutetext">
           {/* Site links */}
           <Link className="hover:text-text transition" to="/about">About</Link>

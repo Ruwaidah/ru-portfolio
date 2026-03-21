@@ -109,17 +109,16 @@ export default function ProjectCard({ p }) {
             >
               Live Demo
             </a>
-
             <a
-              href={p.links?.github || "#"}
+              href={p.links?.code || "#"}
               target="_blank"
               rel="noreferrer"
-              className={`rounded-xl border px-4 py-2 text-center text-sm transition ${p.links?.github
-                ? "border-white/10 bg-white/5 text-mutetext hover:bg-white/10 hover:text-text"
-                : "pointer-events-none border-white/10 bg-white/5 text-mutetext opacity-40"
+              className={`rounded-xl border px-4 py-2 text-center text-sm transition ${p.links?.code
+                  ? "border-white/10 bg-white/5 text-mutetext hover:bg-white/10 hover:text-text"
+                  : "pointer-events-none border-white/10 bg-white/5 text-mutetext opacity-40"
                 }`}
             >
-              GitHub
+              Code
             </a>
           </div>
         </div>

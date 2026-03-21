@@ -26,9 +26,27 @@ export const projects = [
     architecture: ["React UI", "Node/Express API", "Postgres", "Socket.io", "Cloudinary (media)"],
     links: {
       live: "https://message-app-ukya.onrender.com/",
+      code: "https://github.com/Ruwaidah/connect-fe",
       githubFrontend: "https://github.com/Ruwaidah/connect-fe",
       githubBackend: "https://github.com/Ruwaidah/connect-be",
     },
+    demoAccounts:
+      [{
+        email: "test1@gmail.com",
+        password: 12345678
+      }
+        ,
+      {
+        email: "test2@gmail.com",
+        password: 12345678
+      },
+      {
+        email: "test3@gmail.com",
+        password: 12345678
+      }
+
+      ]
+
   },
   {
     id: "Scheduling-app",
@@ -89,6 +107,7 @@ export const projects = [
     ],
     links: {
       live: "https://schedule-fe-jmpv.onrender.com",
+      code: "https://github.com/Ruwaidah/schedule-fe",
       githubFrontend: "https://github.com/Ruwaidah/schedule-fe",
       githubBackend: "https://github.com/Ruwaidah/schedule-be",
     },
@@ -147,8 +166,8 @@ export const projects = [
     ],
     links: {
       live: "https://boo-fe.onrender.com/",
+      code: "https://github.com/Ruwaidah/boo-fe",
       githubFrontend: "https://github.com/Ruwaidah/boo-fe",
-      // githubBackend: "https://github.com/you/project-be",
     },
   }
 ];
