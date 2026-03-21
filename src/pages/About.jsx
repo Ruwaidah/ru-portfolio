@@ -121,19 +121,47 @@ export default function About() {
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               <GlassCard className="p-6">
                 <h2 className="text-lg font-semibold">Certifications</h2>
-                <div className="mt-5 space-y-3">
+                <div className="mt-5 space-y-4">
+                  {/* Springboard */}
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    <div className="text-sm font-semibold text-text">
-                      Springboard — Software Development Career Program
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="text-sm font-semibold text-text">
+                          Springboard — Software Development Career Program
+                        </div>
+                        <div className="mt-1 text-xs text-mutetext">2024</div>
+                      </div>
+
+                      <a
+                        href="/certificates/springboard-2024.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="shrink-0 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+                      >
+                        View PDF
+                      </a>
                     </div>
-                    <div className="mt-1 text-xs text-mutetext">2024</div>
                   </div>
 
+                  {/* Lambda School */}
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    <div className="text-sm font-semibold text-text">
-                      Lambda School — Full-Stack Web Development
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="text-sm font-semibold text-text">
+                          Lambda School — Full-Stack Web Development
+                        </div>
+                        <div className="mt-1 text-xs text-mutetext">2020</div>
+                      </div>
+
+                      <a
+                        href="/certificates/lambda-2020.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="shrink-0 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+                      >
+                        View PDF
+                      </a>
                     </div>
-                    <div className="mt-1 text-xs text-mutetext">2020</div>
                   </div>
                 </div>
               </GlassCard>
@@ -157,15 +185,19 @@ export default function About() {
                   <ul className="mt-1 space-y-3 text-sm text-mutetext">
                     <li className="flex gap-3">
                       <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-white/20" />
+                      Selected to train and onboard new Fulfillment Team Leads across stores
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-white/20" />
+                      Served as a remodel support champion to help stores maintain fulfillment performance during remodels
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-white/20" />
                       Led daily operations, trained associates, and improved execution quality
                     </li>
                     <li className="flex gap-3">
                       <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-white/20" />
                       Focused on speed, accuracy, and customer experience using metrics
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-white/20" />
-                      Clear communication + ownership—skills I bring into software teams
                     </li>
                   </ul>
                 </div>

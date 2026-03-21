@@ -84,21 +84,7 @@ export default function CaseStudy() {
                 </span>
               </div>
             </div>
-
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {p.metrics?.length > 0 && p.metrics.map((m) => (
-                <GlassCard key={m.label} className="p-5">
-                  <div className="text-xs uppercase tracking-wide text-mutetext/80">
-                    {m.label}
-                  </div>
-                  <div className="mt-2 text-xl md:text-2xl font-semibold text-pink-200 leading-snug">
-                    {m.value}
-                  </div>
-                </GlassCard>
-              ))}
-            </div>
-
-            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-2">
               <GlassCard className="p-6">
                 <h2 className="text-lg font-semibold">Problem</h2>
                 <p className="mt-3 text-sm leading-relaxed text-mutetext">{p.problem}</p>
@@ -145,7 +131,33 @@ export default function CaseStudy() {
                       Live Demo
                     </a>
                   )}
-                  {p.links.github && (
+
+                  {/* Frontend repo */}
+                  {p.links.githubFrontend && (
+                    <a
+                      href={p.links.githubFrontend}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-mutetext hover:bg-white/10 hover:text-text transition"
+                    >
+                      Frontend Repo
+                    </a>
+                  )}
+
+                  {/* Backend repo */}
+                  {p.links.githubBackend && (
+                    <a
+                      href={p.links.githubBackend}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-mutetext hover:bg-white/10 hover:text-text transition"
+                    >
+                      Backend Repo
+                    </a>
+                  )}
+
+                  {/* Optional: fallback if you still have p.links.github */}
+                  {!p.links.githubFrontend && !p.links.githubBackend && p.links.github && (
                     <a
                       href={p.links.github}
                       target="_blank"
