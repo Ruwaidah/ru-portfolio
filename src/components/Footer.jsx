@@ -30,7 +30,7 @@ export default function Footer() {
           </a>
           <a
             className="hover:text-text transition"
-            href="https://www.linkedin.com/in/ruwaidah-a-930b9a8b/"
+            href="https://www.linkedin.com/in/ruwaidah"
             target="_blank"
             rel="noreferrer"
           >
