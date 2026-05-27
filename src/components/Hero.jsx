@@ -7,19 +7,25 @@ export default function Hero() {
     <section className="relative pt-10 md:pt-14">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
-          <Pill>
-            <span className="h-2 w-2 rounded-full bg-pink-400" />
-            Full-Stack Developer
-          </Pill>
+          <div className="flex flex-wrap items-center gap-2">
+            <Pill>
+              <span className="h-2 w-2 rounded-full bg-pink-400" />
+              Full-Stack Developer
+            </Pill>
 
-          <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-5xl">
-            I build full-stack <br className="hidden md:block" />
-            apps that scale
+            <Pill>
+              <span className="h-2 w-2 rounded-full bg-white/30" />
+              IT Support Fundamentals
+            </Pill>
+          </div>
+          <h1 className="mt-6 text-[28px] font-semibold leading-tight tracking-tight md:text-[40px]">
+            Full-Stack Developer
+            <span className="block text-pink-200 md:inline"> • IT Support</span>
           </h1>
 
           <p className="mt-4 max-w-xl text-base leading-relaxed text-mutetext">
-            From frontend UI to backend logic and deployment, I create fast,
-            secure, and maintainable products.
+            I build fast, secure full-stack products—from UI to APIs to deployment.
+            I also bring strong IT fundamentals in troubleshooting and networking basics.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
@@ -30,6 +36,10 @@ export default function Hero() {
             <Link to="/contact">
               <Button variant="ghost">Contact Me</Button>
             </Link>
+
+            <a href="/resume.pdf" target="_blank" rel="noreferrer">
+              <Button variant="ghost">Resume</Button>
+            </a>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-2 text-xs text-mutetext">
@@ -38,12 +48,10 @@ export default function Hero() {
               "Vite",
               "Tailwind",
               "Node",
-              "Express",
               "PostgreSQL",
-              "Knex",
               "Socket.io",
-              "Cloudinary",
-              "Git/GitHub",
+              "Troubleshooting",
+              "TCP/IP Basics",
             ].map((t) => (
               <span
                 key={t}

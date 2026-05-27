@@ -38,8 +38,8 @@ export default function About() {
             </div>
 
             {/* Cards */}
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              <GlassCard className="p-6">
+            <div className="mt-10 grid gap-6 md:grid-cols-3 items-stretch">
+              <GlassCard className="p-6 h-full">
                 <h2 className="text-lg font-semibold">What I build</h2>
                 <p className="mt-2 text-sm text-mutetext">
                   End-to-end products—from UI to APIs to database design.
@@ -65,54 +65,103 @@ export default function About() {
                 </ul>
               </GlassCard>
 
-              <GlassCard className="p-6">
-                <h2 className="text-lg font-semibold">Tech stack</h2>
+ <GlassCard className="p-6 h-full">
+  <h2 className="text-lg font-semibold">Tech stack</h2>
+  <p className="mt-2 text-sm text-mutetext">
+    Core tools I use to build and deliver full-stack applications.
+  </p>
+
+  <div className="mt-5 space-y-5">
+    {/* Frontend */}
+    <div className="flex gap-3">
+      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+      <div className="w-full">
+        <div className="text-xs font-semibold text-text/90">Frontend</div>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {["JavaScript", "HTML", "CSS", "Tailwind"].map((t) => (
+            <span
+              key={t}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Backend */}
+    <div className="flex gap-3">
+      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+      <div className="w-full">
+        <div className="text-xs font-semibold text-text/90">Backend</div>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {["Node.js", "Express", "Knex", "Socket.io"].map((t) => (
+            <span
+              key={t}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Database & Tools */}
+    <div className="flex gap-3">
+      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+      <div className="w-full">
+        <div className="text-xs font-semibold text-text/90">Database & Tools</div>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {["PostgreSQL", "Git", "Cloudinary", "Python"].map((t) => (
+            <span
+              key={t}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</GlassCard>
+
+              <GlassCard className="p-6 h-full">
+                <h2 className="text-lg font-semibold">IT & Technical Support</h2>
                 <p className="mt-2 text-sm text-mutetext">
-                  Tools I’m comfortable using to ship real projects.
+                  Strong fundamentals in troubleshooting, networking basics, operating systems, and customer support.
                 </p>
 
-                <div className="mt-5 space-y-4">
-                  <div>
-                    <div className="text-xs font-semibold text-text/90">Frontend</div>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {["JavaScript", "HTML", "CSS", "Tailwind"].map((t) => (
-                        <span
-                          key={t}
-                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
+                <div className="mt-5 space-y-3 text-sm text-mutetext">
+                  <div className="flex gap-3">
+                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+                    Troubleshooting: identify root cause, isolate issues, document fixes
                   </div>
+                  <div className="flex gap-3">
+                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+                    Networking basics: TCP/IP, DNS, HTTP/HTTPS, ports
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+                    OS + tools: Windows/macOS basics, command line, system checks
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+                    Customer-focused support: clear communication and follow-up
+                  </div>
+                </div>
 
-                  <div>
-                    <div className="text-xs font-semibold text-text/90">Backend</div>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {["Node.js", "Express", "Knex", "Socket.io"].map((t) => (
-                        <span
-                          key={t}
-                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="text-xs font-semibold text-text/90">Database & Other</div>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {["PostgreSQL", "Git", "Cloudinary", "Python"].map((t) => (
-                        <span
-                          key={t}
-                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <a
+                    href="/certificates/TechnicalSupportFundamentals.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-xl border border-pink-400/20 bg-pink-500/10 px-3 py-2 text-xs text-pink-200 hover:bg-pink-500/15 transition"
+                  >
+                    View Google Certificate
+                  </a>
                 </div>
               </GlassCard>
             </div>
@@ -122,6 +171,26 @@ export default function About() {
               <GlassCard className="p-6">
                 <h2 className="text-lg font-semibold">Certifications</h2>
                 <div className="mt-5 space-y-4">
+                  {/* Google / Coursera */}
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="text-sm font-semibold text-text">
+                          Google (Coursera) — Technical Support Fundamentals
+                        </div>
+                        <div className="mt-1 text-xs text-mutetext">May 2026</div>
+                      </div>
+
+                      <a
+                        href="/certificates/TechnicalSupportFundamentals.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="shrink-0 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+                      >
+                        View PDF
+                      </a>
+                    </div>
+                  </div>
                   {/* Springboard */}
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4">
                     <div className="flex items-start justify-between gap-4">
@@ -203,32 +272,6 @@ export default function About() {
                 </div>
               </GlassCard>
             </div>
-
-            <GlassCard className="mt-6 p-6">
-              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold">What I’m looking for</h3>
-                  <p className="mt-2 text-sm text-mutetext">
-                    A full-stack role where I can build production features, collaborate, and keep leveling up.
-                  </p>
-                </div>
-
-                <div className="mt-4 flex gap-3 md:mt-0">
-                  <a
-                    href="/projects"
-                    className="rounded-xl border border-pink-400/20 bg-pink-500/10 px-5 py-2.5 text-sm font-medium text-pink-200 hover:bg-pink-500/15 transition"
-                  >
-                    View Projects
-                  </a>
-                  <a
-                    href="/contact"
-                    className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-mutetext hover:bg-white/10 hover:text-text transition"
-                  >
-                    Contact
-                  </a>
-                </div>
-              </div>
-            </GlassCard>
           </section>
         </motion.div>
       </main>
