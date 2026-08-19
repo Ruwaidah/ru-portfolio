@@ -65,68 +65,68 @@ export default function About() {
                 </ul>
               </GlassCard>
 
- <GlassCard className="p-6 h-full">
-  <h2 className="text-lg font-semibold">Tech stack</h2>
-  <p className="mt-2 text-sm text-mutetext">
-    Core tools I use to build and deliver full-stack applications.
-  </p>
+              <GlassCard className="p-6 h-full">
+                <h2 className="text-lg font-semibold">Tech stack</h2>
+                <p className="mt-2 text-sm text-mutetext">
+                  Core tools I use to build and deliver full-stack applications.
+                </p>
 
-  <div className="mt-5 space-y-5">
-    {/* Frontend */}
-    <div className="flex gap-3">
-      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
-      <div className="w-full">
-        <div className="text-xs font-semibold text-text/90">Frontend</div>
-        <div className="mt-2 flex flex-wrap gap-2">
-          {["JavaScript", "HTML", "CSS", "Tailwind"].map((t) => (
-            <span
-              key={t}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
+                <div className="mt-5 space-y-5">
+                  {/* Frontend */}
+                  <div className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+                    <div className="w-full">
+                      <div className="text-xs font-semibold text-text/90">Frontend</div>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {["JavaScript", "HTML", "CSS", "Tailwind"].map((t) => (
+                          <span
+                            key={t}
+                            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
 
-    {/* Backend */}
-    <div className="flex gap-3">
-      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
-      <div className="w-full">
-        <div className="text-xs font-semibold text-text/90">Backend</div>
-        <div className="mt-2 flex flex-wrap gap-2">
-          {["Node.js", "Express", "Knex", "Socket.io"].map((t) => (
-            <span
-              key={t}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
+                  {/* Backend */}
+                  <div className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+                    <div className="w-full">
+                      <div className="text-xs font-semibold text-text/90">Backend</div>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {["Node.js", "Express", "Knex", "Socket.io"].map((t) => (
+                          <span
+                            key={t}
+                            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
 
-    {/* Database & Tools */}
-    <div className="flex gap-3">
-      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
-      <div className="w-full">
-        <div className="text-xs font-semibold text-text/90">Database & Tools</div>
-        <div className="mt-2 flex flex-wrap gap-2">
-          {["PostgreSQL", "Git", "Cloudinary", "Python"].map((t) => (
-            <span
-              key={t}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</GlassCard>
+                  {/* Database & Tools */}
+                  <div className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pink-400" />
+                    <div className="w-full">
+                      <div className="text-xs font-semibold text-text/90">Database & Tools</div>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {["PostgreSQL", "Git", "Cloudinary", "Python"].map((t) => (
+                          <span
+                            key={t}
+                            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </GlassCard>
 
               <GlassCard className="p-6 h-full">
                 <h2 className="text-lg font-semibold">IT & Technical Support</h2>
@@ -171,26 +171,6 @@ export default function About() {
               <GlassCard className="p-6">
                 <h2 className="text-lg font-semibold">Certifications</h2>
                 <div className="mt-5 space-y-4">
-                  {/* Google / Coursera */}
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <div className="text-sm font-semibold text-text">
-                          Google (Coursera) — Technical Support Fundamentals
-                        </div>
-                        <div className="mt-1 text-xs text-mutetext">May 2026</div>
-                      </div>
-
-                      <a
-                        href="/certificates/TechnicalSupportFundamentals.pdf"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="shrink-0 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
-                      >
-                        View PDF
-                      </a>
-                    </div>
-                  </div>
                   {/* Springboard */}
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4">
                     <div className="flex items-start justify-between gap-4">
@@ -224,6 +204,25 @@ export default function About() {
 
                       <a
                         href="/certificates/lambda-2020.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="shrink-0 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"
+                      >
+                        View PDF
+                      </a>
+                    </div>
+                  </div>
+                  {/* Google / Coursera */}
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="text-sm font-semibold text-text">
+                          Google (Coursera) — Technical Support Fundamentals
+                        </div>
+                        <div className="mt-1 text-xs text-mutetext">May 2026</div>
+                      </div>
+                      <a
+                        href="/certificates/TechnicalSupportFundamentals.pdf"
                         target="_blank"
                         rel="noreferrer"
                         className="shrink-0 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-xs text-mutetext hover:bg-white/10 hover:text-text transition"

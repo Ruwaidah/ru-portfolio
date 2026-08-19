@@ -71,10 +71,10 @@ export default function Contact() {
 
                 <div className="mt-6 space-y-3 text-sm text-mutetext">
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    Email: ruwaidah.riyadh@email.com
+                    Email: ruwaidah.riyadh@gmail.com
                   </div>
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    Location: USA (Remote)
+                    Location: USA
                   </div>
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4">
                     Availability: Open for projects

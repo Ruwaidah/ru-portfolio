@@ -1,8 +1,95 @@
 import connectImg from "../assets/connect.png";
 import scheduleImg from "../assets/schedule.png";
 import booImg from "../assets/boo.png"
+import fulfillFlowImg from "../assets/fulfillFlowImg.png"
+
 
 export const projects = [
+  {
+    id: "fulfillflow",
+    image: fulfillFlowImg,
+
+    title: "FulfillFlow",
+    tagline:
+      "Full-stack order operations platform for tracking fulfillment workflows, assignments, and order activity",
+
+    category: "Full-Stack Web App",
+
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+    ],
+
+    tags: [
+      "Order Management",
+      "REST API",
+      "Prisma",
+      "PostgreSQL",
+      "Workflow",
+    ],
+
+    year: 2026,
+    status: "In progress",
+    progress: 65,
+
+    highlights: [
+      "Order creation and status tracking",
+      "Pickup, delivery, and shipping order types",
+      "Search and filtering by status",
+      "Detailed order pages with activity history",
+      "Frontend integration with an Express REST API",
+      "PostgreSQL database managed through Prisma",
+      "Responsive dashboard interface",
+    ],
+
+    problem:
+      "Fulfillment teams need a clear way to track orders through multiple stages, including picking, staging, dispensing, delivery, and completion. Operational information can become difficult to follow when status changes, assignments, and order activity are spread across different workflows.",
+
+    solution:
+      "Built a full-stack order operations platform that centralizes order details, fulfillment status, assignments, and activity history. The application supports pickup, delivery, and shipping orders while providing searchable dashboards and detailed workflow visibility.",
+
+    architecture: [
+      "Next.js and TypeScript frontend",
+      "Tailwind CSS responsive interface",
+      "Node.js and Express REST API",
+      "PostgreSQL relational database",
+      "Prisma ORM for models, migrations, and queries",
+      "Activity history for order status changes",
+    ],
+
+    features: [
+      "Create and view fulfillment orders",
+      "Track order status through the fulfillment lifecycle",
+      "Filter and search orders",
+      "View order details and activity history",
+      "Support pickup, delivery, and shipping order types",
+      "Connect the frontend to the backend API",
+      "Store application data in PostgreSQL",
+    ],
+
+    roadmap: [
+      "Multiple picker assignments by order section",
+      "Ambient, chilled, and frozen picking workflows",
+      "Dispenser assignment for completed orders",
+      "Role-based access control",
+      "Real-time operational updates",
+      "Reporting and analytics dashboard",
+    ],
+
+    links: {
+      live: "https://fulfillflow-frontend.onrender.com/dashboard",
+      code: "https://github.com/Ruwaidah/FulfillFlow-Frontend",
+      githubFrontend:
+        "https://github.com/Ruwaidah/FulfillFlow-Frontend",
+      githubBackend:
+        "https://github.com/Ruwaidah/FulfillFlow-Backend",
+    },
+  },
   {
     id: "connect-app",
     image: connectImg,
