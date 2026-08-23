@@ -27,14 +27,14 @@ export default function Home() {
           ))}
         </div>
 
-        <MotionItem className="mt-8 flex justify-center">
+        {/* <MotionItem className="mt-8 flex justify-center">
           <Link
             to="/projects"
             className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-mutetext hover:bg-white/10"
           >
             View All Projects
           </Link>
-        </MotionItem>
+        </MotionItem> */}
 
         <div className="mt-12 h-px w-full bg-white/10" />
       </MotionSection>

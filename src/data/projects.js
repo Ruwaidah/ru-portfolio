@@ -199,62 +199,62 @@ export const projects = [
       githubBackend: "https://github.com/Ruwaidah/schedule-be",
     },
   },
-  {
-    id: "boo-pet-adoption-app",
-    image: booImg,
-    title: "BOO Pet Adoption App",
-    tagline: "Modern pet discovery experience with favorites, filtering, and detailed pet profiles",
-    category: "Web App",
-    stack: ["React (Vite)", "Tailwind", "Redux Toolkit", "React Router", "Mock Data"],
-    tags: ["Pet Adoption", "Filtering", "Favorites", "Responsive UI", "Redux"],
-    year: 2026,
+  // {
+  //   id: "boo-pet-adoption-app",
+  //   image: booImg,
+  //   title: "BOO Pet Adoption App",
+  //   tagline: "Modern pet discovery experience with favorites, filtering, and detailed pet profiles",
+  //   category: "Web App",
+  //   stack: ["React (Vite)", "Tailwind", "Redux Toolkit", "React Router", "Mock Data"],
+  //   tags: ["Pet Adoption", "Filtering", "Favorites", "Responsive UI", "Redux"],
+  //   year: 2026,
 
-    status: "In progress",
-    progress: 75,
+  //   status: "In progress",
+  //   progress: 75,
 
-    highlights: [
-      "Modern landing page with pet-focused branding and CTA sections",
-      "Browse pets page with responsive card grid layout",
-      "Large mock dataset for realistic app browsing and filtering",
-      "Dynamic pet details pages using route params",
-      "Favorites feature powered by Redux Toolkit",
-      "Category filtering for dogs and cats",
-      "Custom 404 not found page for polished routing experience"
-    ],
-    problem:
-      "Many pet adoption platforms feel outdated, cluttered, or difficult to browse. Users need a cleaner and more engaging way to explore pets, view details, and save favorites.",
+  //   highlights: [
+  //     "Modern landing page with pet-focused branding and CTA sections",
+  //     "Browse pets page with responsive card grid layout",
+  //     "Large mock dataset for realistic app browsing and filtering",
+  //     "Dynamic pet details pages using route params",
+  //     "Favorites feature powered by Redux Toolkit",
+  //     "Category filtering for dogs and cats",
+  //     "Custom 404 not found page for polished routing experience"
+  //   ],
+  //   problem:
+  //     "Many pet adoption platforms feel outdated, cluttered, or difficult to browse. Users need a cleaner and more engaging way to explore pets, view details, and save favorites.",
 
-    solution:
-      "Built a modern pet adoption app concept with a polished landing page, searchable browsing experience, pet detail pages, and a favorites system. Used realistic mock data to simulate a real-world adoption platform while focusing on a strong portfolio-quality UI and frontend architecture.",
+  //   solution:
+  //     "Built a modern pet adoption app concept with a polished landing page, searchable browsing experience, pet detail pages, and a favorites system. Used realistic mock data to simulate a real-world adoption platform while focusing on a strong portfolio-quality UI and frontend architecture.",
 
-    architecture: [
-      "React UI with reusable page sections and components",
-      "Tailwind CSS for responsive styling and consistent design",
-      "Redux Toolkit for favorites state management",
-      "React Router for page navigation and dynamic pet detail routes",
-      "Mock pet dataset structured for filtering, categories, and featured content"
-    ],
+  //   architecture: [
+  //     "React UI with reusable page sections and components",
+  //     "Tailwind CSS for responsive styling and consistent design",
+  //     "Redux Toolkit for favorites state management",
+  //     "React Router for page navigation and dynamic pet detail routes",
+  //     "Mock pet dataset structured for filtering, categories, and featured content"
+  //   ],
 
-    features: [
-      "Home page with hero, category cards, and CTA sections",
-      "Browse pets grid with category-based filtering",
-      "Pet details page with dynamic route-based content",
-      "Favorites system with persistent local browser storage",
-      "Responsive layout optimized for desktop and mobile",
-      "Custom 404 page for undefined routes"
-    ],
+  //   features: [
+  //     "Home page with hero, category cards, and CTA sections",
+  //     "Browse pets grid with category-based filtering",
+  //     "Pet details page with dynamic route-based content",
+  //     "Favorites system with persistent local browser storage",
+  //     "Responsive layout optimized for desktop and mobile",
+  //     "Custom 404 page for undefined routes"
+  //   ],
 
-    roadmap: [
-      "Advanced filters by breed, age, size, and location",
-      "Search bar for pet names and breeds",
-      "Adoption inquiry form flow",
-      "Featured pets section on the homepage",
-      "Backend/API integration with real pet adoption data source"
-    ],
-    links: {
-      live: "https://boo-fe.onrender.com/",
-      code: "https://github.com/Ruwaidah/boo-fe",
-      githubFrontend: "https://github.com/Ruwaidah/boo-fe",
-    },
-  }
+  //   roadmap: [
+  //     "Advanced filters by breed, age, size, and location",
+  //     "Search bar for pet names and breeds",
+  //     "Adoption inquiry form flow",
+  //     "Featured pets section on the homepage",
+  //     "Backend/API integration with real pet adoption data source"
+  //   ],
+  //   links: {
+  //     live: "https://boo-fe.onrender.com/",
+  //     code: "https://github.com/Ruwaidah/boo-fe",
+  //     githubFrontend: "https://github.com/Ruwaidah/boo-fe",
+  //   },
+  // }
 ];
