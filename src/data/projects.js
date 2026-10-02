@@ -100,7 +100,7 @@ export const projects = [
     tags: ["Realtime", "Chat", "Auth"],
     year: 2026,
     status: "In progress",
-    progress: 60,
+    progress: 75,
     highlights: [
       "Real-time messaging with typing indicators",
       "User profiles + avatar uploads",

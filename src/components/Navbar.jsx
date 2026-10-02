@@ -17,7 +17,7 @@ export default function Navbar() {
             <span className="h-2.5 w-2.5 rotate-45 rounded-sm bg-pink-400" />
           </span>
           <div className="text-sm font-semibold tracking-wide text-text">
-            Ruwaidah Alfakhri • Full-Stack
+            Ruwaidah Alfakhri • Full-Stack-Developer
           </div>
         </Link>
 
