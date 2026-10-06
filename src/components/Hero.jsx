@@ -5,7 +5,7 @@ import HeroMontage from "./art/HeroMontage.jsx";
 export default function Hero() {
   return (
     <section className="relative pt-10 md:pt-14">
-      <div className="grid items-center gap-10 md:grid-cols-2">
+      <div className="grid items-center gap-10 md:grid-cols-[1.08fr_0.92fr]">
         <div>
           <div className="flex flex-wrap items-center gap-2">
             <Pill>
@@ -15,17 +15,16 @@ export default function Hero() {
 
             <Pill>
               <span className="h-2 w-2 rounded-full bg-white/30" />
-              IT Support Fundamentals
+              Applications & Data
             </Pill>
           </div>
-          <h1 className="mt-6 text-[28px] font-semibold leading-tight tracking-tight md:text-[40px]">
-            Full-Stack Developer
-            <span className="block text-pink-200 md:inline"> • IT Support</span>
+          <h1 className="mt-6 text-[28px] font-semibold leading-tight tracking-tight md:text-[36px]">            Software Developer
+            <span className="block text-pink-200 md:inline"> • Full-Stack</span>
+            <span className="block text-pink-200 md:inline"> • Applications & Data</span>
           </h1>
 
           <p className="mt-4 max-w-xl text-base leading-relaxed text-mutetext">
-            I build fast, secure full-stack products—from UI to APIs to deployment.
-            I also bring strong IT fundamentals in troubleshooting and networking basics.
+            I build reliable full-stack applications—from responsive interfaces and REST APIs to databases and deployment—with a focus on problem-solving, data, and application reliability.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
@@ -45,13 +44,14 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-2 text-xs text-mutetext">
             {[
               "React",
-              "Vite",
-              "Tailwind",
-              "Node",
+              "TypeScript",
+              "Node.js",
               "PostgreSQL",
-              "Socket.io",
+              "SQL",
+              "REST APIs",
+              "Git",
+              "Testing",
               "Troubleshooting",
-              "TCP/IP Basics",
             ].map((t) => (
               <span
                 key={t}
@@ -62,15 +62,16 @@ export default function Hero() {
             ))}
 
             <span className="rounded-full border border-pink-400/25 bg-pink-500/10 px-3 py-1 text-pink-200">
-              JWT Auth
+              Full-Stack
             </span>
+
             <span className="rounded-full border border-pink-400/25 bg-pink-500/10 px-3 py-1 text-pink-200">
               Real-time
             </span>
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative w-full">
           <div
             className="absolute -inset-6 rounded-[28px] opacity-60 blur-2xl"
             style={{
@@ -78,6 +79,7 @@ export default function Hero() {
                 "radial-gradient(circle at 30% 20%, rgba(232,90,174,0.55), transparent 60%)",
             }}
           />
+
           <div className="relative rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-glass">
             <HeroMontage />
           </div>

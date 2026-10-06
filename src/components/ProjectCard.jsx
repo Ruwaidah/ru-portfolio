@@ -3,21 +3,11 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import StatusPill from "./StatusPill.jsx";
 
-function Screenshot({ src, alt, status, progress }) {
-  const isInProgress = String(status).toLowerCase().includes("progress");
-  const v = Math.max(0, Math.min(100, Number(progress ?? 0)));
-
+function Screenshot({ src, alt, status }) {
   return (
     <div className="relative h-44 w-full overflow-hidden rounded-xl border border-white/10 bg-white/5">
-      {/* Status pill */}
-      <StatusPill status={status} progress={progress} />
-
-      {/* Progress badge */}
-      {isInProgress && (
-        <div className="absolute right-4 top-4 z-10 rounded-full border border-white/15 bg-black/55 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur-glass">
-          {v}%
-        </div>
-      )}
+      {/* Status */}
+      <StatusPill status={status} />
 
       {/* Image */}
       {src ? (
@@ -44,30 +34,21 @@ function Screenshot({ src, alt, status, progress }) {
         </>
       )}
 
-      {/* progress bar*/}
-      {isInProgress && (
-        <div className="absolute bottom-3 left-4 right-4 z-10">
-          <div className="h-1.5 w-full rounded-full bg-black/50">
-            <div
-              className="h-1.5 rounded-full bg-pink-500/80"
-              style={{ width: `${v}%` }}
-            />
-          </div>
-        </div>
-      )}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20" />
     </div>
   );
 }
 
 export default function ProjectCard({ p }) {
-  const hasLinks = Boolean(p.links?.live || p.links?.github);
 
   return (
     <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.25 }}>
       <GlassCard className="p-5 h-full flex flex-col">
-        <Screenshot src={p.image} alt={p.title} status={p.status} progress={p.progress} />
-
+        <Screenshot
+          src={p.image}
+          alt={p.title}
+          status={p.status}
+        />
         <div className="mt-5 flex items-start justify-between gap-4">
           <div className="min-w-0">
             <h3 className="truncate text-lg font-semibold">{p.title}</h3>
@@ -114,8 +95,8 @@ export default function ProjectCard({ p }) {
               target="_blank"
               rel="noreferrer"
               className={`rounded-xl border px-4 py-2 text-center text-sm transition ${p.links?.code
-                  ? "border-white/10 bg-white/5 text-mutetext hover:bg-white/10 hover:text-text"
-                  : "pointer-events-none border-white/10 bg-white/5 text-mutetext opacity-40"
+                ? "border-white/10 bg-white/5 text-mutetext hover:bg-white/10 hover:text-text"
+                : "pointer-events-none border-white/10 bg-white/5 text-mutetext opacity-40"
                 }`}
             >
               Code

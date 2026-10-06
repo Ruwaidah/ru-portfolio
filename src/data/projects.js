@@ -34,9 +34,7 @@ export const projects = [
     ],
 
     year: 2026,
-    status: "In progress",
-    progress: 65,
-
+    status: "Live",
     highlights: [
       "Order creation and status tracking",
       "Pickup, delivery, and shipping order types",
@@ -99,8 +97,8 @@ export const projects = [
     stack: ["React", "Node", "Express", "Postgres", "Socket.io"],
     tags: ["Realtime", "Chat", "Auth"],
     year: 2026,
-    status: "In progress",
-    progress: 75,
+    status: "Live",
+
     highlights: [
       "Real-time messaging with typing indicators",
       "User profiles + avatar uploads",
@@ -145,8 +143,8 @@ export const projects = [
     tags: ["RBAC", "Scheduling", "CRUD", "JWT", "Seeds"],
     year: 2026,
 
-    status: "In progress",
-    progress: 70,
+    status: "Live",
+
 
     highlights: [
       "HR/Admin dashboard + Associate-only experience",
@@ -209,8 +207,8 @@ export const projects = [
   //   tags: ["Pet Adoption", "Filtering", "Favorites", "Responsive UI", "Redux"],
   //   year: 2026,
 
-  //   status: "In progress",
-  //   progress: 75,
+  //   status: "Live",
+  //   
 
   //   highlights: [
   //     "Modern landing page with pet-focused branding and CTA sections",
